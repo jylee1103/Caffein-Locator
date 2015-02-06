@@ -52,14 +52,14 @@ public class MainActivity extends Activity {
 
         @Override
         public void onLocationChanged(final Location location) {
-            FoursquareExploreCoffeeNearby foursquareExploreCoffeeNearby = new FoursquareExploreCoffeeNearby(new FourSquareServiceListener());
+            FoursquareExploreCoffeeNearbyTask foursquareExploreCoffeeNearbyTask = new FoursquareExploreCoffeeNearbyTask(new FourSquareServiceListener());
             Log.d(getLocalClassName(), "onLocationChanged - Created foursquareExploreCoffeeNearby task");
             Log.d(getLocalClassName(), "onLocationChanged - Executing foursquareExploreCoffeeNearby task with lat and lng " + location.getLatitude() + " " + location.getLongitude());
-            foursquareExploreCoffeeNearby.execute(location);
+            foursquareExploreCoffeeNearbyTask.execute(location);
         }
     }
 
-    private class FourSquareServiceListener implements FoursquareExploreCoffeeNearby.Listener {
+    private class FourSquareServiceListener implements FoursquareExploreCoffeeNearbyTask.Listener {
 
         @Override
         public void onVenueRetrieved(final ArrayList<Venue> venues) {
