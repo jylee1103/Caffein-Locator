@@ -22,7 +22,7 @@ Android Studio 1.0.1
         geo fix 151.206239 -33.881372
 
 ## Implementation Approach
-    - Assumptions were made to achieve the requirements without complicating too much
+    - Assumptions were made to achieve the requirements without complicating too much such are assumed that GPS was always avaliable, time between refresh and level of accuracy
     - Since I was new to the android app development, TDD wasn't exercised but instead used log and ran the application frequently
     - MainActivity is responsible to call LocationService and FoursquareExploreCoffeeNearbyTask
     - LocationService is responsible only to interact with Location Manager 
